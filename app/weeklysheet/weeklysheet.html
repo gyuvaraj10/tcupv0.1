@@ -1,0 +1,22 @@
+<div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Regular</th>
+            <th>Overtime</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="dayeffort in dayefforts">
+            <td>{{dayeffort.day}}</td>
+            <td>{{dayeffort.date}}</td>
+            <td>{{dayeffort.regular}}</td>
+            <td>{{dayeffort.overtime}}</td>
+            <td>{{dayeffort.total}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

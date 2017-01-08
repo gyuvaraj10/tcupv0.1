@@ -1,0 +1,105 @@
+<div>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a>project xxxx</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            project xxxx
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">project 1</a></li>
+                            <li><a href="#">project 2</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a>Onshore</a>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Onshore
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <li><a href="#">Onshore</a></li>
+                            <li><a href="#">Offshore</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            January
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                            <li><a href="#">February</a></li>
+                            <li><a href="#">March</a></li>
+                            <li><a href="#">April</a></li>
+                            <li><a href="#">May</a></li>
+                            <li><a href="#">June</a></li>
+                            <li><a href="#">July</a></li>
+                            <li><a href="#">August</a></li>
+                            <li><a href="#">September</a></li>
+                            <li><a href="#">October</a></li>
+                            <li><a href="#">November</a></li>
+                            <li><a href="#">December</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p class="navbar-text navbar-right">Resource will be able to update/submit current or last month timesheet</p>
+                </li>
+                <!-- <li>
+	  <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+	  </li> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Weekly Hours</h3>
+            <!-- tabs left -->
+            <div class="tabbable tabs-left">
+                <ul class="nav nav-pills">
+                    <li ng-repeat="week in weeks">
+                        <a href="#{{week.name}}" data-toggle="tab">{{week.name}}</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane" ng-repeat="week in weeks" id="{{week.name}}">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Day</th>
+                                        <th>Date</th>
+                                        <th>Regular</th>
+                                        <th>Overtime</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="effort in week.dayefforts">
+                                        <td ng-model="effort.day">{{effort.day}}</td>
+                                        <td ng-model="effort.date">{{effort.date}}</td>
+                                        <td ng-model="effort.regular">{{effort.regular}}</td>
+                                        <td ng-model="effort.overtime">{{effort.overtime}}</td>
+                                        <td ng-model="effort.total">{{effort.total}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /row -->
+</div>

@@ -4,6 +4,13 @@
 
 
 angular.module('myApp')
-    .controller('LoginController', ['$scope', function($scope){
-      $scope.msg = 'Hi Yuvaraj';
-      }]);
+    .controller('LoginController', ['$scope', '$state', function($scope, $state){
+      $scope.login = function(){
+      	console.log($scope.username);
+        console.log($scope.password);
+
+        if($scope.username === 'yuvaraj' && $scope.password === 'password'){
+            $state.go('tcup.tsheet');
+        }
+      };
+}]);
